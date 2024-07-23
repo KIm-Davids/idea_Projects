@@ -22,7 +22,7 @@ class CommentServiceImplTest {
     @BeforeEach
     void deleteAll(){
         repository.deleteAll();
-       
+
     }
 
     @Test

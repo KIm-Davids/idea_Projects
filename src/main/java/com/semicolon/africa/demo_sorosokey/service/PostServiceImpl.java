@@ -3,18 +3,20 @@ package com.semicolon.africa.demo_sorosokey.service;
 import com.semicolon.africa.demo_sorosokey.data.model.Post;
 import com.semicolon.africa.demo_sorosokey.data.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
 public class PostServiceImpl implements PostService{
+@Autowired
+PostRepository postRepository;
 
-
-    private final PostRepository postRepository;
-
-    public PostServiceImpl(PostRepository postRepository) {
-        this.postRepository = postRepository;
-    }
+//    private final PostRepository postRepository;
+//
+//    public PostServiceImpl(PostRepository postRepository) {
+//        this.postRepository = postRepository;
+//    }
 
     @Override
     public Post addPost(String title, String content) {

@@ -1,18 +1,17 @@
 package com.semicolon.africa.demo_sorosokey.data.model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Setter
 @Getter
-@NoArgsConstructor
 @Document
+@RequiredArgsConstructor
 public class Comment {
-
-    String id;
-    String title;
+    @DBRef
+    private User commenter;
     String comment;
+    private String id;
+
 }

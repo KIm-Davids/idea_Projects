@@ -4,19 +4,21 @@ import com.semicolon.africa.demo_sorosokey.data.model.Comment;
 import com.semicolon.africa.demo_sorosokey.data.model.Post;
 import com.semicolon.africa.demo_sorosokey.data.repository.CommentRepository;
 import com.semicolon.africa.demo_sorosokey.data.repository.PostRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
 public class CommentServiceImpl implements CommentService{
 
+    @Autowired
+    CommentRepository commentRepository;
 
-    private CommentRepository commentRepository;
-
-    public CommentServiceImpl(CommentRepository commentRepository) {
-        this.commentRepository = commentRepository;
-    }
+//    public CommentServiceImpl(CommentRepository commentRepository) {
+//        this.commentRepository = commentRepository;
+//    }
 
     @Override
     public Comment addComment(String title, String content) {

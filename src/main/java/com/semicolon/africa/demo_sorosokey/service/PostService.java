@@ -12,5 +12,4 @@ public interface PostService {
     String deletePost(String id);
     List<Post> getAllPost();
 
-
 }
